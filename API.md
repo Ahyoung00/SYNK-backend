@@ -51,7 +51,7 @@ Authorization: Bearer {token}
 | 기능 | Method | URL | 토큰 |
 |------|--------|-----|------|
 | 미션 제출 | POST | /api/submissions | 필요 |
-| 제출 현황 조회 | POST | /api/submissions/missions/{missionId} | 불필요 |
+| 제출 현황 조회 | GET | /api/submissions/missions/{missionId} | 불필요 |
 | 개별 영상 조회 | GET | /api/submissions/{submissionId} | 필요 |
 
 ### 알림 (Notifications)
@@ -686,7 +686,7 @@ Status:
 - 401: 인증 토큰 없음
 - 404: 존재하지 않는 미션
 
-#### POST /api/submissions/missions/{missionId}
+#### GET /api/submissions/missions/{missionId}
 설명: 특정 미션의 모든 제출물을 조회합니다
 Request: 없음
 Response:
@@ -782,12 +782,12 @@ Response:
 },
 {
 "id": 5,
-"type": "ACHIEVEMENT",
-"title": "이번 주 도감 5개 완료!",
-"content": "3일 전",
-"createdAt": "2026-05-04T20:10:00",
+"type": "MEMBER_JOIN",
+"title": "수현님이 새벽밤에 들어왔어요",
+"content": "4일 전",
+"createdAt": "2026-05-03T10:00:00",
 "isRead": true,
-"relatedId": null
+"relatedId": 1
 }
 ]
 },

@@ -206,7 +206,7 @@ chat_id
 Table notifications {
 id bigint [pk, increment]
 user_id bigint [not null, ref: > users.id]
-type enum('MISSION_START', 'MISSION_COMPLETE', 'SYNKLOG_CREATED', 'MEMBER_JOIN', 'ACHIEVEMENT') [not null]
+type enum('MISSION_START', 'MISSION_COMPLETE', 'SYNKLOG_CREATED', 'MEMBER_JOIN') [not null]
 title varchar(200) [not null]
 content varchar(500) [not null]
 related_id bigint
